@@ -25,17 +25,17 @@ namespace Nau.Simple.Maui.Core
 		{
 			System.Console.WriteLine("*** Display Alert Should Show (but won't) ***");
 
-			bool selectedOption = await PageInContext.DisplayAlert("Did this appear?", "Please select an option", "True", "False");
+			bool selectedOption = await PageInContext.DisplayAlertAsync("Did this appear?", "Please select an option", "True", "False");
 
 			// Note: this will never be hit with the embedded use case of MAUI as the alert will never be displayed and no result captured.
-			System.Console.WriteLine($"*** Selected value from DisplayAlert is {selectedOption}. ***");
+			System.Console.WriteLine($"*** Selected value from DisplayAlertAsync is {selectedOption}. ***");
 		}
 
 		private async Task ShowActionSheetAsync()
 		{
 			System.Console.WriteLine("*** Display Action Sheet Should Show (but won't) ***");
 
-			string selectedOption = await PageInContext.DisplayActionSheet("Please select an option", "Cancel Option", "Destructive Option", "Option One", "Option Two");
+			string selectedOption = await PageInContext.DisplayActionSheetAsync("Please select an option", "Cancel Option", "Destructive Option", "Option One", "Option Two");
 
 			// Note: this will never be hit with the embedded use case of MAUI as the action sheet will never be displayed and no result captured.
 			System.Console.WriteLine($"*** Selected value from DisplayActionSheet is {selectedOption}. ***");
